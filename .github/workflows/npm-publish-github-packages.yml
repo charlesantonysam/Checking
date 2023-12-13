@@ -23,14 +23,21 @@ jobs:
         with:
           node-version: 16
 
+      - name: Set working directory
+        run: cd sample-packages/npm  # Set the correct path to your project
+        shell: bash
+
       - name: Install dependencies
         run: npm install
+        working-directory: sample-packages/npm  # Set the correct path to your project
 
       - name: Run tests
         run: npm test
+        working-directory: sample-packages/npm  # Set the correct path to your project
 
       - name: Build
         run: npm run build  # Assuming you have a "build" script in your package.json
+        working-directory: sample-packages/npm  # Set the correct path to your project
 
       - name: Publish to GitHub Packages
         run: |
@@ -38,3 +45,4 @@ jobs:
             echo "//npm.pkg.github.com/:_authToken=${GITHUB_TOKEN}" > ~/.npmrc
           fi
           npm publish
+        working-directory: sample-packages/npm  # Set the correct path to your project
