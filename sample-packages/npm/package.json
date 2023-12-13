@@ -1,5 +1,5 @@
 {
-  "name": "your-package-name",
+  "name": "sample-packages",
   "version": "1.0.0",
   "scripts": {
     "test": "echo 'No test step'",
@@ -11,12 +11,15 @@
     "url": "https://github.com/charlesantonysam/checking"
   },
   "keywords": ["node", "npm", "package"],
-  "author": "Your Name",
+  "author": "charlesantonysam",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/charlesantonysam/checking/issues"
   },
   "homepage": "https://github.com/charlesantonysam/checking#readme",
   "devDependencies": {},
-  "dependencies": {}
+  "dependencies": {},
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/"
+  }
 }
