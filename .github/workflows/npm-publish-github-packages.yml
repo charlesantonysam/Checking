@@ -53,6 +53,10 @@ jobs:
       - name: Configure GitHub Packages registry
         run: echo "@github:registry=https://npm.pkg.github.com/" >> ~/.npmrc
 
+      - name: Set package name explicitly
+        run: npm config set init.name "sample-packages"
+        working-directory: sample-packages/npm
+
       - name: Publish to GitHub Packages
         run: npm publish --access public
         working-directory: sample-packages/npm  # Set the correct path to your project
