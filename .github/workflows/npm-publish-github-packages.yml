@@ -18,14 +18,18 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v3
 
+      - name: Set working directory
+        run: cd sample-packages/npm  # Set the correct path to your project
+        shell: bash
+
+      - name: Validate package.json
+        run: npm ls --json
+        working-directory: sample-packages/npm  # Set the correct path to your project
+
       - name: Set up Node.js
         uses: actions/setup-node@v3
         with:
           node-version: 16
-
-      - name: Set working directory
-        run: cd sample-packages/npm  # Set the correct path to your project
-        shell: bash
 
       - name: Install dependencies
         run: npm install
