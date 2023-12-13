@@ -43,10 +43,9 @@ jobs:
         run: npm run build  # Assuming you have a "build" script in your package.json
         working-directory: sample-packages/npm  # Set the correct path to your project
 
+      - name: Authenticate with GitHub Packages
+        run: echo "//npm.pkg.github.com/:_authToken=${GITHUB_TOKEN}" > ~/.npmrc
+
       - name: Publish to GitHub Packages
-        run: |
-          if [ -n "$GITHUB_TOKEN" ]; then
-            echo "//npm.pkg.github.com/:_authToken=${GITHUB_TOKEN}" > ~/.npmrc
-          fi
-          npm publish
+        run: npm publish
         working-directory: sample-packages/npm  # Set the correct path to your project
