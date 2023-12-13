@@ -2,10 +2,10 @@
   "name": "your-package-name",
   "version": "1.0.0",
   "scripts": {
-    "test": "echo 'No test step'",      // No testing framework
-    "build": "echo 'No build step'"     // No build tools
+    "test": "echo 'No test step'",
+    "build": "echo 'No build step'"
   },
-  "main": "index.js",                    // Adjust accordingly based on your project structure
+  "main": "index.js",
   "repository": {
     "type": "git",
     "url": "https://github.com/charlesantonysam/checking"
@@ -17,10 +17,6 @@
     "url": "https://github.com/charlesantonysam/checking/issues"
   },
   "homepage": "https://github.com/charlesantonysam/checking#readme",
-  "devDependencies": {
-    // Add your development dependencies here
-  },
-  "dependencies": {
-    // Add your runtime dependencies here
-  }
+  "devDependencies": {},
+  "dependencies": {}
 }
