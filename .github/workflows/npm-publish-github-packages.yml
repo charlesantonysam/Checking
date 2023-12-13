@@ -31,6 +31,9 @@ jobs:
       - name: Run tests
         run: npm test
 
+      - name: Build
+        run: npm run build  # Assuming you have a "build" script in your package.json
+
       - name: Publish to GitHub Packages
         run: |
           if [ -n "$GITHUB_TOKEN" ]; then
